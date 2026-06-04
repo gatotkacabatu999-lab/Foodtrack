@@ -1,4 +1,4 @@
-import { type FoodItem, type InsertFoodItem, type UpdateFoodItem, foodItems } from "@shared/schema";
+import { type FoodItem, type InsertFoodItem, type UpdateFoodItem, foodItems } from "../shared/schema";
 import { randomUUID } from "crypto";
 import { db } from "./db";
 import { eq } from "drizzle-orm";

@@ -1,10 +1,9 @@
 import type { Express } from "express";
-import { createServer, type Server } from "http";
 import { storage } from "./storage";
-import { insertFoodItemSchema, updateFoodItemSchema } from "@shared/schema";
+import { insertFoodItemSchema, updateFoodItemSchema } from "../shared/schema";
 import { z } from "zod";
 
-export async function registerRoutes(app: Express): Promise<Server> {
+export async function registerRoutes(app: Express): Promise<void> {
   // Get all active food items
   app.get("/api/food-items", async (req, res) => {
     try {
